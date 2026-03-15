@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shwouble | psp tech</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        :root {
+            /* Material You Dark Theme Palette (Tonal Palettes) */
+            --md-sys-color-background: #1A1C1E;
+            --md-sys-color-on-background: #E2E2E6;
+            --md-sys-color-surface: #2F3033;
+            --md-sys-color-primary: #D1E4FF;
+            --md-sys-color-on-primary: #003258;
+            --md-sys-color-secondary-container: #3E4759;
+            --md-sys-color-on-secondary-container: #D7E3F7;
+            --md-sys-color-outline: #8E9199;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-background);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            transition: all 0.3s ease;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 450px;
+            text-align: center;
+        }
+
+        /* Card Style */
+        .profile-card {
+            background-color: var(--md-sys-color-surface);
+            padding: 2rem;
+            border-radius: 28px; /* Material 3 Extra Large Corner */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #004A77, #D1E4FF);
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            color: var(--md-sys-color-on-primary);
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin: 0.5rem 0;
+            font-weight: 500;
+        }
+
+        p.subtitle {
+            color: var(--md-sys-color-outline);
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        /* Chips / Badges */
+        .chips {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .chip {
+            background-color: var(--md-sys-color-secondary-container);
+            color: var(--md-sys-color-on-secondary-container);
+            padding: 6px 16px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Buttons */
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .link-btn {
+            text-decoration: none;
+            background-color: var(--md-sys-color-primary);
+            color: var(--md-sys-color-on-primary);
+            padding: 14px;
+            border-radius: 16px; /* Material 3 Large Corner */
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+
+        .link-btn:hover {
+            transform: scale(1.02);
+            opacity: 0.9;
+        }
+
+        /* Language Switcher */
+        .lang-switch {
+            margin-top: 2rem;
+            cursor: pointer;
+            color: var(--md-sys-color-primary);
+            background: none;
+            border: 1px solid var(--md-sys-color-outline);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            transition: 0.3s;
+        }
+
+        .lang-switch:hover {
+            background-color: rgba(209, 228, 255, 0.1);
+        }
+
+        [lang="en"] { display: none; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="profile-card">
+        <div class="avatar">
+            <span class="material-symbols-rounded" style="font-size: 48px;">terminal</span>
+        </div>
+
+        <div id="content-ru" lang="ru">
+            <h1>shwouble | psp tech</h1>
+            <p class="subtitle">Разработчик & Энтузиаст</p>
+            
+            <div class="chips">
+                <div class="chip">
+                    <span class="material-symbols-rounded" style="font-size: 18px;">code</span>
+                    Python
+                </div>
+                <div class="chip">
+                    <span class="material-symbols-rounded" style="font-size: 18px;">language</span>
+                    Русский
+                </div>
+            </div>
+
+            <div class="links">
+                <a href="https://t.me/shwouble" class="link-btn">
+                    Telegram Канал
+                </a>
+                <a href="https://t.me/shwoublebot" class="link-btn">
+                    Мой Бот
+                </a>
+                <a href="https://github.com/ShwoubleTrouble/" class="link-btn">
+                    GitHub
+                </a>
+            </div>
+        </div>
+
+        <div id="content-en" lang="en">
+            <h1>shwouble | psp tech</h1>
+            <p class="subtitle">Developer & Enthusiast</p>
+            
+            <div class="chips">
+                <div class="chip">
+                    <span class="material-symbols-rounded" style="font-size: 18px;">code</span>
+                    Python
+                </div>
+                <div class="chip">
+                    <span class="material-symbols-rounded" style="font-size: 18px;">language</span>
+                    Russian
+                </div>
+            </div>
+
+            <div class="links">
+                <a href="https://t.me/shwouble" class="link-btn">
+                    Telegram Channel
+                </a>
+                <a href="https://t.me/shwoublebot" class="link-btn">
+                    My Bot
+                </a>
+                <a href="https://github.com/ShwoubleTrouble/" class="link-btn">
+                    GitHub
+                </a>
+            </div>
+        </div>
+
+        <button class="lang-switch" onclick="toggleLang()">Switch to English</button>
+    </div>
+</div>
+
+<script>
+    function toggleLang() {
+        const ru = document.getElementById('content-ru');
+        const en = document.getElementById('content-en');
+        const btn = document.querySelector('.lang-switch');
+
+        if (ru.style.display === 'none') {
+            ru.style.display = 'block';
+            en.style.display = 'none';
+            btn.innerText = 'Switch to English';
+        } else {
+            ru.style.display = 'none';
+            en.style.display = 'block';
+            btn.innerText = 'Переключить на русский';
+        }
+    }
+</script>
+
+</body>
+</html>
